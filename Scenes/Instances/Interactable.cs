@@ -2,14 +2,6 @@ namespace Scenes.Instances;
 
 public partial class Interactable : RigidBody2D{
 
-    [ExportGroup("Node Ref")]
-    [Export] Sprite2D sprite;
-    public Texture2D Texture{
-
-        get => sprite.Texture;
-        set => sprite.Texture = value;
-    }
-
     Vector2 moveDir;
 
     bool mouse = false;
