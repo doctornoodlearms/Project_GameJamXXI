@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://4ttc6ffvqtjk"]
+
+[ext_resource type="PackedScene" uid="uid://dwmxs48k7bu8a" path="res://Scenes/Instances/Interactable.tscn" id="1_26x5r"]
+[ext_resource type="Script" uid="uid://baf1pielu3x65" path="res://Scenes/Instances/Ingredient.cs" id="2_iid0h"]
+
+[node name="Ingredient" node_paths=PackedStringArray("sprite") instance=ExtResource("1_26x5r")]
+script = ExtResource("2_iid0h")
+sprite = NodePath("Sprite")
+ingredientName = ""
+
+[node name="Sprite" type="Sprite2D" parent="." index="1"]
