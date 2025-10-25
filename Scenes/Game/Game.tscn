@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dltvw12h5h0el"]
+[gd_scene load_steps=13 format=3 uid="uid://dltvw12h5h0el"]
 
 [ext_resource type="Texture2D" uid="uid://mj17felcmvh8" path="res://Scenes/Game/assets/3d-fantasy-scene.jpg" id="1_gwu2e"]
 [ext_resource type="Script" uid="uid://cj1b0oh6c5cg6" path="res://Scenes/Game/Game.cs" id="1_ln2h6"]
 [ext_resource type="Script" uid="uid://bfpdgqlycp0m6" path="res://Scenes/Game/PotionShelf.cs" id="3_xbxml"]
 [ext_resource type="Texture2D" uid="uid://b3pjkdxbkuuyj" path="res://Scenes/Game/assets/Table.png" id="4_ln2h6"]
 [ext_resource type="Script" uid="uid://b0jr1e5jbfohe" path="res://Scenes/Game/CustomerInstance.cs" id="4_y3kpf"]
+[ext_resource type="Texture2D" uid="uid://bqx2rskhb3xv7" path="res://icon.svg" id="5_1q8bt"]
+[ext_resource type="PackedScene" uid="uid://c0al47bmqr18k" path="res://Scenes/Instances/OrbInterface.tscn" id="6_3k6gv"]
+[ext_resource type="Script" uid="uid://xuegq7an53im" path="res://Scenes/Instances/Orb.cs" id="7_gvja8"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_gwu2e"]
 
@@ -13,6 +16,9 @@ size = Vector2(380, 496)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwu2e"]
 size = Vector2(1215, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q8bt"]
+size = Vector2(118, 115)
 
 [node name="Game" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -51,7 +57,7 @@ texture = ExtResource("4_ln2h6")
 [node name="Shelf" type="StaticBody2D" parent="." node_paths=PackedStringArray("potionSpawns")]
 position = Vector2(209, 657)
 script = ExtResource("3_xbxml")
-potionSpawns = [NodePath("PotionSpawn"), NodePath("PotionSpawn2"), NodePath("PotionSpawn3"), NodePath("PotionSpawn4")]
+potionSpawns = [NodePath("PotionSpawn"), null, null, NodePath("PotionSpawn4")]
 
 [node name="Collision" type="CollisionShape2D" parent="Shelf"]
 position = Vector2(394.5, 3)
@@ -59,16 +65,10 @@ shape = SubResource("RectangleShape2D_gwu2e")
 metadata/_edit_lock_ = true
 
 [node name="PotionSpawn" type="Node2D" parent="Shelf"]
-position = Vector2(451, -77)
-
-[node name="PotionSpawn2" type="Node2D" parent="Shelf"]
-position = Vector2(814, -69)
-
-[node name="PotionSpawn3" type="Node2D" parent="Shelf"]
-position = Vector2(667, -81)
+position = Vector2(-107, -93)
 
 [node name="PotionSpawn4" type="Node2D" parent="Shelf"]
-position = Vector2(559, -77)
+position = Vector2(80, -80)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("nextPageButton")]
 script = ExtResource("1_ln2h6")
@@ -84,3 +84,20 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 text = ">"
+
+[node name="Orb2" type="CanvasLayer" parent="."]
+
+[node name="OrbInterface" parent="Orb2" instance=ExtResource("6_3k6gv")]
+visible = false
+
+[node name="Orb" type="Area2D" parent="."]
+position = Vector2(944, 514)
+script = ExtResource("7_gvja8")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="Orb"]
+texture = ExtResource("5_1q8bt")
+
+[node name="Collision" type="CollisionShape2D" parent="Orb"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_1q8bt")

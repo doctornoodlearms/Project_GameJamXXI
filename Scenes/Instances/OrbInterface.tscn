@@ -1,21 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0al47bmqr18k"]
+[gd_scene load_steps=3 format=3 uid="uid://c0al47bmqr18k"]
 
 [ext_resource type="Script" uid="uid://ccwm6ycc0i3xi" path="res://Scenes/Instances/OrbInterface.cs" id="1_v4cqw"]
 
-[node name="OrbInterface" type="PanelContainer" node_paths=PackedStringArray("potionEntries")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4cqw"]
+bg_color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[node name="OrbInterface" type="PanelContainer" node_paths=PackedStringArray("potionEntries", "potionText")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4cqw")
 script = ExtResource("1_v4cqw")
 potionEntries = NodePath("TabContainer/Recipes/HSplitContainer/SymptomList")
+potionText = NodePath("TabContainer/Recipes/HSplitContainer/RichTextLabel")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 2
-current_tab = 0
+current_tab = 1
 
 [node name="Symptoms" type="VBoxContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -31,7 +37,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Recipes" type="VBoxContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -45,3 +50,4 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Recipes/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
