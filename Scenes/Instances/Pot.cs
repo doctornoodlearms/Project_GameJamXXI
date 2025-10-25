@@ -1,4 +1,5 @@
 using Definitions.Potions;
+using Scenes.Global;
 
 namespace Scenes.Instances;
 
@@ -6,6 +7,7 @@ public partial class Pot : Area2D{
 
     PackedScene potionInstance;
 
+    [Export] Array<Shelf> ingredientShelfList;
     [Export] Node2D potionSpawn;
     [Export] int potionIngredientCount;
 
@@ -13,7 +15,10 @@ public partial class Pot : Area2D{
 
     Dictionary<string, Array> potionLookup = new Dictionary<string, Array>(){
 
-        {Potion.Name, Potion.Keys}
+        {PotionHeatStroke.Name, PotionHeatStroke.Keys},
+        {PotionHypothermia.Name, PotionHypothermia.Keys},
+        {PotionSick.Name, PotionSick.Keys},
+        {PotionStabbed.Name, PotionStabbed.Keys}
     };
 
     public override void _EnterTree(){
@@ -32,9 +37,17 @@ public partial class Pot : Area2D{
 
         PotionInstance instance = potionInstance.Instantiate<PotionInstance>();
         instance.PotionName = GetPotionName();
+
+        CraftedPotions.Self.AddPotion(instance.PotionName);
+
         potionSpawn.AddChild(instance);
 
         currentIngredients.Clear();
+
+        foreach(Shelf shelf in ingredientShelfList){
+
+            shelf.RespawnIngredient();
+        }
     }
 
     void onBodyEntered(Node2D body){
