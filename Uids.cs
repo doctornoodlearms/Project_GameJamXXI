@@ -2,6 +2,8 @@ namespace Uids;
 
 public static class Uid {
 
+    public const string CreditsScene = "uid://ofgu8a1b534t";
+
     public const string PotionMakingScene = "uid://g3r263eaacvs";
     public const string FrontCounterScene = "uid://dltvw12h5h0el";
 

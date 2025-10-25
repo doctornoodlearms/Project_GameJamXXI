@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bff1b272qecbf" path="res://Scenes/Menus/Assets/font/SPIRITS.TTF" id="1_c30c8"]
 [ext_resource type="Texture2D" uid="uid://b8bmwxueb83lg" path="res://Scenes/Menus/Assets/2.png" id="1_j4niu"]
-[ext_resource type="Script" uid="uid://brfrno2n6bisk" path="res://Scenes/Menus/Button.cs" id="3_qchve"]
+[ext_resource type="Script" uid="uid://bdlsvu6eo0jvq" path="res://Scenes/Menus/Credits.cs" id="3_c30c8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4niu"]
 texture = ExtResource("1_j4niu")
@@ -68,7 +68,6 @@ theme_override_styles/pressed = SubResource("StyleBoxLine_j4niu")
 theme_override_styles/normal = SubResource("StyleBoxFlat_cvrk1")
 text = "
 "
-script = ExtResource("3_qchve")
 metadata/_edit_use_anchors_ = true
 
 [node name="Credits" type="Button" parent="MarginContainer"]
@@ -82,3 +81,4 @@ theme_override_styles/focus = SubResource("StyleBoxLine_c30c8")
 theme_override_styles/pressed = SubResource("StyleBoxLine_qchve")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2iqon")
 text = "Credits"
+script = ExtResource("3_c30c8")
