@@ -2,7 +2,7 @@ using Definitions.Ingredients;
 namespace Definitions.Potions;
 
 
-public partial class StabbedPotion : GodotObject
+public partial class PotionStabbed : GodotObject
 {
 
     public const string Name = "StabbedPotion";
@@ -18,7 +18,7 @@ public partial class StabbedPotion : GodotObject
     public static Color PotionColor = Colors.IndianRed;
 }
 
-public partial class HypothermiaPotion : GodotObject
+public partial class PotionHypothermia : GodotObject
 {
 
     public const string Name = "HypothermiaPotion";
@@ -34,7 +34,7 @@ public partial class HypothermiaPotion : GodotObject
     public static Color PotionColor = Colors.BlueViolet;
 }
 
-public partial class HeatStrokePotion : GodotObject
+public partial class PotionHeatStroke : GodotObject
 {
 
     public const string Name = "HeatStrokePotion";
@@ -50,7 +50,7 @@ public partial class HeatStrokePotion : GodotObject
     public static Color PotionColor = Colors.Orange;
 }
 
-public partial class SickPotion : GodotObject {
+public partial class PotionSick : GodotObject {
 
     public const string Name = "SickPotion";
 
