@@ -1,6 +1,5 @@
 namespace Scenes.Instances;
 
-[Tool]
 public partial class Interactable : RigidBody2D{
 
     [ExportGroup("Node Ref")]
