@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://civ5rthuuah1b"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_rxg2q"]
+script/source = "using NDLDebug;
+
+public partial class Main : Node{
+
+    public override void _Ready(){
+
+        Logging.Print(\"TESTING\", true);
+
+   
+
+    }
+}
+"
+
+[node name="Main" type="Node2D"]
+script = SubResource("CSharpScript_rxg2q")
