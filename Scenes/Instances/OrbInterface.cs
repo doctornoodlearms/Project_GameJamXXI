@@ -1,11 +1,11 @@
-using System.Text.Json.Serialization;
 using Definitions.Potions;
 
-public partial class OrbInterface : Node{
+public partial class OrbInterface : Control{
 
 
     [Export] VBoxContainer symptomList;
     [Export] VBoxContainer potionEntries;
+    [Export] Button closeButton;
 
     [Export] RichTextLabel potionText;
 
@@ -30,6 +30,8 @@ public partial class OrbInterface : Node{
             potionButton.Pressed += () => onPotionButtonPressed(potionName);
             potionEntries.AddChild(potionButton);
         }
+
+        closeButton.Pressed += onClosePressed;
     }
 
     void onPotionButtonPressed(string potionName){
@@ -59,5 +61,10 @@ public partial class OrbInterface : Node{
         }
 
         potionText.Text = text;
+    }
+
+    void onClosePressed(){
+
+        Visible = false;
     }
 }
