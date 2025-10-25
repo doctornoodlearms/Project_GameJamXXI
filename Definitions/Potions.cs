@@ -1,16 +1,66 @@
 using Definitions.Ingredients;
 namespace Definitions.Potions;
 
-public partial class Potion : GodotObject {
 
-    public const string Name = "Potion";
+public partial class StabbedPotion : GodotObject
+{
+
+    public const string Name = "StabbedPotion";
 
     public static Array Keys = new Array(){
 
         IngredientEyeball.Name,
         IngredientGraveyardDust.Name,
-		IngredientHolyWater.Name
+        SpiderString.Name,
+        Blorb.Name
     };
 
-    public static Color PotionColor = Colors.RebeccaPurple;
+    public static Color PotionColor = Colors.IndianRed;
+}
+
+public partial class HypothermiaPotion : GodotObject
+{
+
+    public const string Name = "HypothermiaPotion";
+
+    public static Array Keys = new Array(){
+
+        IngredientEyeball.Name,
+        IngredientHolyWater.Name,
+        SpiderString.Name,
+        IceShard.Name
+    };
+
+    public static Color PotionColor = Colors.BlueViolet;
+}
+
+public partial class HeatStrokePotion : GodotObject
+{
+
+    public const string Name = "HeatStrokePotion";
+
+    public static Array Keys = new Array(){
+
+        WillowBark.Name,
+        IngredientGraveyardDust.Name,
+        SpiderString.Name,
+        Fireflies.Name
+    };
+
+    public static Color PotionColor = Colors.Orange;
+}
+
+public partial class SickPotion : GodotObject {
+
+    public const string Name = "SickPotion";
+
+    public static Array Keys = new Array(){
+
+        WillowBark.Name,
+        IngredientGraveyardDust.Name,
+		IngredientHolyWater.Name,
+        SpiritEssence.Name
+    };
+
+    public static Color PotionColor = Colors.WhiteSmoke;
 }
