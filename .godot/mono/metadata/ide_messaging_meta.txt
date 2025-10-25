@@ -1,2 +1,0 @@
-﻿43543
-/home/evan/Desktop/Godot_v4.4.1/Godot_v4.4.1-stable_mono_linux.x86_64
