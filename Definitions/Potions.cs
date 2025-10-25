@@ -14,8 +14,9 @@ public partial class PotionStabbed : GodotObject
         SpiderString.Name,
         Blorb.Name
     };
-
     public static Color PotionColor = Colors.IndianRed;
+
+    public static string Description = "Stabbed Potion";
 }
 
 public partial class PotionHypothermia : GodotObject
@@ -30,8 +31,8 @@ public partial class PotionHypothermia : GodotObject
         SpiderString.Name,
         IceShard.Name
     };
-
     public static Color PotionColor = Colors.BlueViolet;
+    public static string Description = "Hypothermia Potion";
 }
 
 public partial class PotionHeatStroke : GodotObject
@@ -46,8 +47,8 @@ public partial class PotionHeatStroke : GodotObject
         SpiderString.Name,
         Fireflies.Name
     };
-
     public static Color PotionColor = Colors.Orange;
+    public static string Description = "Heat Stroke Potion";
 }
 
 public partial class PotionSick : GodotObject {
@@ -61,6 +62,6 @@ public partial class PotionSick : GodotObject {
 		IngredientHolyWater.Name,
         SpiritEssence.Name
     };
-
     public static Color PotionColor = Colors.WhiteSmoke;
+    public static string Description = "Sick Potion";
 }
