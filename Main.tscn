@@ -1,19 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://civ5rthuuah1b"]
+[gd_scene load_steps=2 format=3 uid="uid://0m04icrspj54"]
 
-[sub_resource type="CSharpScript" id="CSharpScript_rxg2q"]
-script/source = "using NDLDebug;
-
-public partial class Main : Node{
-
-    public override void _Ready(){
-
-        Logging.Print(\"TESTING\", true);
-
-   
-
-    }
-}
-"
+[ext_resource type="Script" path="res://Main.cs" id="1_glv2v"]
 
 [node name="Main" type="Node2D"]
-script = SubResource("CSharpScript_rxg2q")
+script = ExtResource("1_glv2v")
