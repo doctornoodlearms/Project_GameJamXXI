@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bggeld6co0ha1"]
+[gd_scene load_steps=10 format=3 uid="uid://bggeld6co0ha1"]
 
+[ext_resource type="FontFile" uid="uid://bff1b272qecbf" path="res://Scenes/Menus/Assets/font/SPIRITS.TTF" id="1_c30c8"]
 [ext_resource type="Texture2D" uid="uid://b8bmwxueb83lg" path="res://Scenes/Menus/Assets/2.png" id="1_j4niu"]
+[ext_resource type="Script" uid="uid://brfrno2n6bisk" path="res://Scenes/Menus/Button.cs" id="3_qchve"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4niu"]
 texture = ExtResource("1_j4niu")
@@ -14,6 +16,15 @@ modulate_color = Color(0.243137, 0.243137, 0.243137, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvrk1"]
 bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_c30c8"]
+color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_qchve"]
+color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iqon"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Menu" type="PanelContainer"]
 anchors_preset = 15
@@ -32,17 +43,18 @@ theme_override_constants/margin_bottom = 10
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/CenterContainer"]
+[node name="Title" type="Label" parent="MarginContainer/CenterContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c30c8")
 theme_override_font_sizes/font_size = 146
-text = "Menu"
+text = "Halloween"
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
 position = Vector2(1090, 599)
 scale = Vector2(0.0217037, 0.0217037)
 texture = ExtResource("1_j4niu")
 
-[node name="Button" type="Button" parent="MarginContainer/Sprite2D"]
+[node name="Play" type="Button" parent="MarginContainer/Sprite2D"]
 custom_minimum_size = Vector2(100, 75)
 offset_left = -2212.0
 offset_top = -1659.0
@@ -56,3 +68,17 @@ theme_override_styles/pressed = SubResource("StyleBoxLine_j4niu")
 theme_override_styles/normal = SubResource("StyleBoxFlat_cvrk1")
 text = "
 "
+script = ExtResource("3_qchve")
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(125, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_c30c8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxLine_c30c8")
+theme_override_styles/pressed = SubResource("StyleBoxLine_qchve")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2iqon")
+text = "Credits"
