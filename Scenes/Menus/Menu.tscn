@@ -1,9 +1,58 @@
-[gd_scene format=3 uid="uid://bggeld6co0ha1"]
+[gd_scene load_steps=5 format=3 uid="uid://bggeld6co0ha1"]
 
-[node name="Menu" type="Control"]
-layout_mode = 3
+[ext_resource type="Texture2D" uid="uid://b8bmwxueb83lg" path="res://Scenes/Menus/Assets/2.png" id="1_j4niu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4niu"]
+texture = ExtResource("1_j4niu")
+expand_margin_left = 889.0
+expand_margin_top = 85.0
+expand_margin_right = 845.0
+expand_margin_bottom = 135.0
+modulate_color = Color(0.243137, 0.243137, 0.243137, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_j4niu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvrk1"]
+bg_color = Color(1, 1, 1, 0)
+
+[node name="Menu" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 146
+text = "Menu"
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(1090, 599)
+scale = Vector2(0.0217037, 0.0217037)
+texture = ExtResource("1_j4niu")
+
+[node name="Button" type="Button" parent="MarginContainer/Sprite2D"]
+custom_minimum_size = Vector2(100, 75)
+offset_left = -2212.0
+offset_top = -1659.0
+offset_right = 2258.0
+offset_bottom = 1612.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 37
+theme_override_styles/hover = SubResource("StyleBoxTexture_j4niu")
+theme_override_styles/pressed = SubResource("StyleBoxLine_j4niu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvrk1")
+text = "
+"
