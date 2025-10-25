@@ -1,5 +1,6 @@
 namespace Scenes.Instances;
 
+[Tool]
 public partial class Interactable : RigidBody2D{
 
     [ExportGroup("Node Ref")]
@@ -23,7 +24,7 @@ public partial class Interactable : RigidBody2D{
     }
 
     public override void _PhysicsProcess(double delta){        
-        
+
         if(followMouse){
 
             moveDir = GlobalPosition.DirectionTo(GetGlobalMousePosition());
@@ -41,7 +42,7 @@ public partial class Interactable : RigidBody2D{
     }
 
     public override void _Input(InputEvent @event){
-        
+
         if(@event is InputEventMouseButton mouseButton){
 
             followMouse = mouse && mouseButton.Pressed && mouseButton.ButtonIndex == MouseButton.Left;

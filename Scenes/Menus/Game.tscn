@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dltvw12h5h0el"]
-
-[ext_resource type="PackedScene" uid="uid://dwmxs48k7bu8a" path="res://Scenes/Instances/Interactable.tscn" id="1_lp0gw"]
+[gd_scene format=3 uid="uid://dltvw12h5h0el"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -10,6 +8,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
-
-[node name="Interactable" parent="." instance=ExtResource("1_lp0gw")]
-position = Vector2(214, 164)
