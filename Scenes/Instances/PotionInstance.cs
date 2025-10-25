@@ -18,10 +18,27 @@ public partial class PotionInstance : Interactable{
 
         switch(name){
 
-            case(Potion.Name):
+            case(PotionHeatStroke.Name):
 
-                sprite.Modulate = Potion.PotionColor;
+                sprite.Modulate = PotionHeatStroke.PotionColor;
                 break;
+
+            case(PotionHypothermia.Name):
+
+                sprite.Modulate = PotionHypothermia.PotionColor;
+                break;
+
+            case(PotionSick.Name):
+
+                sprite.Modulate = PotionSick.PotionColor;
+                break;
+
+            case(PotionStabbed.Name):
+
+                sprite.Modulate = PotionStabbed.PotionColor;
+                break;
+            
+
         }
 
     }

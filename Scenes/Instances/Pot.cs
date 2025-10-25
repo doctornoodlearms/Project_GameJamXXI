@@ -15,7 +15,10 @@ public partial class Pot : Area2D{
 
     Dictionary<string, Array> potionLookup = new Dictionary<string, Array>(){
 
-        {Potion.Name, Potion.Keys}
+        {PotionHeatStroke.Name, PotionHeatStroke.Keys},
+        {PotionHypothermia.Name, PotionHypothermia.Keys},
+        {PotionSick.Name, PotionSick.Keys},
+        {PotionStabbed.Name, PotionStabbed.Keys}
     };
 
     public override void _EnterTree(){
