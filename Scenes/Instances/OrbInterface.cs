@@ -38,20 +38,26 @@ public partial class OrbInterface : Node{
         switch(potionName){
 
             case(PotionHeatStroke.Name):
-                text = PotionHeatStroke.Description;
+                text = $"[pulse][color={PotionHeatStroke.PotionColor.ToHtml()}][b]{PotionHeatStroke.DisplayName}[/b][/color][/pulse]";
+                text += "\nIngredients: "+ PotionHeatStroke.IngredientsText;
                 break;
-                
+
             case(PotionHypothermia.Name):
-                text = PotionHypothermia.Description;
+                text = $"[shake][color={PotionHypothermia.PotionColor.ToHtml()}][b]{PotionHypothermia.DisplayName}[/b][/color][/shake]";
+                text += "\nIngredients: " + PotionHypothermia.IngredientsText;
                 break;
             
             case(PotionStabbed.Name):
-                text = PotionStabbed.Description;
+                text = $"[wave][color={PotionStabbed.PotionColor.ToHtml()}][b]{PotionStabbed.DisplayName}[/b][/color][/wave]";
+                text += "\nIngredients: " + PotionStabbed.IngredientsText;
                 break;
 
             case(PotionSick.Name):
-                text = PotionSick.Description;
+                text = $"[tornado][color={PotionSick.PotionColor.ToHtml()}][b]{PotionSick.DisplayName}[/b][/color][/tornado]";
+                text += "\nIngredients: " + PotionSick.IngredientsText;
                 break;
         }
+
+        potionText.Text = text;
     }
 }
