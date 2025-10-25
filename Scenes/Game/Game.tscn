@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dltvw12h5h0el"]
+[gd_scene load_steps=8 format=3 uid="uid://dltvw12h5h0el"]
 
 [ext_resource type="Texture2D" uid="uid://mj17felcmvh8" path="res://Scenes/Game/assets/3d-fantasy-scene.jpg" id="1_gwu2e"]
-[ext_resource type="Texture2D" uid="uid://cfeol4l176cwa" path="res://Scenes/Game/assets/425.jpg" id="2_xbxml"]
 [ext_resource type="Texture2D" uid="uid://dntng5i1rgtno" path="res://Scenes/Game/assets/Fluid.png" id="3_ln2h6"]
+[ext_resource type="Texture2D" uid="uid://b3pjkdxbkuuyj" path="res://Scenes/Game/assets/Table.png" id="4_ln2h6"]
 [ext_resource type="Texture2D" uid="uid://ctr2abs12wdnf" path="res://Scenes/Game/assets/Bottle.png" id="4_y3kpf"]
-
-[sub_resource type="MeshTexture" id="MeshTexture_gwu2e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbxml"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -31,59 +29,6 @@ metadata/_edit_lock_ = true
 position = Vector2(580, 353)
 scale = Vector2(0.221762, 0.221762)
 texture = ExtResource("1_gwu2e")
-
-[node name="Stone_Table" type="Node" parent="."]
-
-[node name="425" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(18.9994, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="426" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(161.999, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="427" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(303.998, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="428" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(441.999, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="429" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(578.998, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="430" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(721.998, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="431" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(863.998, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="432" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(1002, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="433" type="Sprite2D" parent="Stone_Table"]
-position = Vector2(1137, 668.999)
-scale = Vector2(0.119999, 0.119999)
-texture = ExtResource("2_xbxml")
-
-[node name="TableTop" type="Sprite2D" parent="."]
-position = Vector2(-85, 558)
-rotation = 0.00215044
-scale = Vector2(1343.28, 45.2957)
-texture = SubResource("MeshTexture_gwu2e")
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(50, 50)
@@ -115,3 +60,9 @@ texture = ExtResource("3_ln2h6")
 [node name="Bottle" type="Sprite2D" parent="."]
 position = Vector2(568, 335)
 texture = ExtResource("4_y3kpf")
+
+[node name="Table" type="Sprite2D" parent="."]
+modulate = Color(0.834614, 0.834614, 0.834614, 1)
+position = Vector2(574, 476)
+scale = Vector2(1, 0.52537)
+texture = ExtResource("4_ln2h6")
