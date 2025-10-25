@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4cqw"]
 bg_color = Color(0.205117, 0.205117, 0.205117, 1)
 
-[node name="OrbInterface" type="PanelContainer" node_paths=PackedStringArray("potionEntries", "potionText")]
+[node name="OrbInterface" type="PanelContainer" node_paths=PackedStringArray("potionEntries", "closeButton", "potionText")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,6 +14,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v4cqw")
 script = ExtResource("1_v4cqw")
 potionEntries = NodePath("TabContainer/Recipes/HSplitContainer/SymptomList")
+closeButton = NodePath("Button")
 potionText = NodePath("TabContainer/Recipes/HSplitContainer/RichTextLabel")
 
 [node name="TabContainer" type="TabContainer" parent="."]
@@ -51,3 +52,11 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 24
+text = "Close"

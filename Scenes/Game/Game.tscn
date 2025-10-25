@@ -70,6 +70,19 @@ position = Vector2(-107, -93)
 [node name="PotionSpawn4" type="Node2D" parent="Shelf"]
 position = Vector2(80, -80)
 
+[node name="Orb" type="Area2D" parent="." node_paths=PackedStringArray("popup")]
+position = Vector2(944, 514)
+script = ExtResource("7_gvja8")
+popup = NodePath("../Orb2/OrbInterface")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="Orb"]
+texture = ExtResource("5_1q8bt")
+
+[node name="Collision" type="CollisionShape2D" parent="Orb"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_1q8bt")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("nextPageButton")]
 script = ExtResource("1_ln2h6")
 nextPageButton = NodePath("Button")
@@ -89,15 +102,3 @@ text = ">"
 
 [node name="OrbInterface" parent="Orb2" instance=ExtResource("6_3k6gv")]
 visible = false
-
-[node name="Orb" type="Area2D" parent="."]
-position = Vector2(944, 514)
-script = ExtResource("7_gvja8")
-metadata/_edit_group_ = true
-
-[node name="Sprite" type="Sprite2D" parent="Orb"]
-texture = ExtResource("5_1q8bt")
-
-[node name="Collision" type="CollisionShape2D" parent="Orb"]
-position = Vector2(0, -1.5)
-shape = SubResource("RectangleShape2D_1q8bt")
