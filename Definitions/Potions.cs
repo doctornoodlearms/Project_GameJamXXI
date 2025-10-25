@@ -41,7 +41,7 @@ public partial class PotionHeatStroke : GodotObject
 {
 
     public const string Name = "HeatStrokePotion";
-    public static string DisplayName = "heat Stroke Potion";
+    public static string DisplayName = "Heat Stroke Potion";
 
     public static Array Keys = new Array(){
 
