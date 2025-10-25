@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://dltvw12h5h0el"]
+[gd_scene load_steps=3 format=3 uid="uid://dltvw12h5h0el"]
+
+[ext_resource type="Texture2D" uid="uid://mj17felcmvh8" path="res://Scenes/Game/assets/3d-fantasy-scene.jpg" id="1_gwu2e"]
+[ext_resource type="Texture2D" uid="uid://cfeol4l176cwa" path="res://Scenes/Game/assets/425.jpg" id="2_xbxml"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -8,3 +11,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
+
+[node name="3d-fantasy-scene" type="Sprite2D" parent="."]
+position = Vector2(580, 353)
+scale = Vector2(0.221762, 0.221762)
+texture = ExtResource("1_gwu2e")
+
+[node name="Stone_Table" type="Node" parent="."]
+
+[node name="425" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(19, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="426" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(162, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="427" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(303.999, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="428" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(442, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="429" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(578.999, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="430" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(721.999, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="431" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(863.999, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="432" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(1002, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
+
+[node name="433" type="Sprite2D" parent="Stone_Table"]
+position = Vector2(1137, 595)
+scale = Vector2(0.119999, 0.119999)
+texture = ExtResource("2_xbxml")
