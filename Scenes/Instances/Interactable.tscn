@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwmxs48k7bu8a"]
+[gd_scene load_steps=3 format=3 uid="uid://dwmxs48k7bu8a"]
 
 [ext_resource type="Script" uid="uid://dbvqnlchuc487" path="res://Scenes/Instances/Interactable.cs" id="1_2vt3a"]
-[ext_resource type="Texture2D" uid="uid://bqx2rskhb3xv7" path="res://icon.svg" id="2_epmln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tc3yj"]
 size = Vector2(123, 123)
@@ -9,10 +8,7 @@ size = Vector2(123, 123)
 [node name="Interactable" type="RigidBody2D" node_paths=PackedStringArray("sprite")]
 input_pickable = true
 script = ExtResource("1_2vt3a")
-sprite = NodePath("Sprite")
-
-[node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_epmln")
+sprite = NodePath("")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -0.5)
