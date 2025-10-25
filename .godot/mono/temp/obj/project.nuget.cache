@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "4MqGyW1kwDlON3nTKgatFISfZ2AWmZGupMSJnkAkD3PzfHTqUCmX1wabejmT1miNORlwialSxQgGFaUYlhSGNQ==",
+  "success": true,
+  "projectFilePath": "/home/evan/Desktop/project_gamejamxxi/Project_GameJamXXI.csproj",
+  "expectedPackageFiles": [
+    "/home/evan/.nuget/packages/godot.sourcegenerators/4.4.1/godot.sourcegenerators.4.4.1.nupkg.sha512",
+    "/home/evan/.nuget/packages/godotsharp/4.4.1/godotsharp.4.4.1.nupkg.sha512",
+    "/home/evan/.nuget/packages/godotsharpeditor/4.4.1/godotsharpeditor.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
