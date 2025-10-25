@@ -1,0 +1,103 @@
+﻿1. Stabbed:
+"I was only trying to break up the fight... and then I felt the cold steel. It’s funny how quickly everything goes black."
+2. Sick:
+"A fever took me. For weeks, I thought I’d be okay. Then one morning... I wasn’t."
+3. Hypothermia:
+"It was a stupid decision, really. Hiking in a blizzard. One minute, I was laughing, and the next, my hands couldn’t move anymore."
+4. Heatstroke:
+"I remember the sun beating down on me. I thought I was strong, but the heat... it just drained everything."
+5. Stabbed:
+"In the end, it wasn’t the blade that killed me. It was the betrayal. A simple twist of the knife, and I was done."
+6. Sick:
+"My family tried to keep me warm, but the cough... it wouldn't stop. And then, in the dark, I finally couldn't breathe anymore."
+7. Hypothermia:
+"They said I'd make it. That I was just a little cold. But then I couldn't remember how to get back inside."
+8. Heatstroke:
+"The desert sun didn’t care that I was too stubborn to rest. By the time I realized I was done, it was too late."
+9. Stabbed:
+"I had no idea he was behind me. I thought I was safe. A shadow, then pain, and everything faded."
+10. Sick:
+"I woke up one morning with the chills. By noon, I couldn't get out of bed. The fever took me faster than I could ever imagine."
+11. Hypothermia:
+"I wasn’t prepared for the storm. The snow piled higher and higher, and I just couldn’t keep moving."
+12. Heatstroke:
+"I thought the mountain air would keep me cool. But as the hours wore on, I started seeing things. Then... nothing at all."
+13. Stabbed:
+"I shouldn’t have gone to that alley. But I needed to find him. The last thing I remember was seeing his eyes, cold and empty."
+14. Sick:
+"It was the nausea that started first, then the sweats. I never thought something so simple could end my life."
+15. Hypothermia:
+"I thought if I just kept walking, I’d make it to shelter. But the cold didn’t care about my willpower."
+16. Heatstroke:
+"I wasn’t even far from home. But the heat hit me fast. One second, I was walking, and the next, I couldn’t feel my legs."
+17. Stabbed:
+"It was supposed to be a normal night out. But then he just... snapped. One quick motion, and everything went black."
+18. Sick:
+"I knew something was wrong when my body didn’t feel like mine. The weakness came first, and then the end came without warning."
+19. Hypothermia:
+"It wasn’t even that cold, they said. But I couldn’t warm up. The cold seeped in, and that was it. I couldn't fight it."
+20. Heatstroke:
+"I thought I could power through it. The heat got unbearable, and my vision blurred, but I pushed on. That was my mistake."
+21. Stabbed:
+"I was reaching for my bag. I didn’t even see him coming. Just a flash of pain, and then I couldn’t feel my hand anymore."
+22. Sick:
+"At first, it was just a cough. But then the fever raged, and I couldn’t stop shaking. I should’ve known... but I didn’t."
+23. Hypothermia:
+"We got lost. The wind howled, and I couldn’t tell which direction we were going. My toes went numb first. Then... everything else."
+24. Heatstroke:
+"I kept walking, hoping the next step would bring me some shade. But the desert doesn't care about hope. It only cares about survival."
+25. Stabbed:
+"We had just started talking, then he said something that made me turn around. That’s when I felt it. The blade, sharp and quick."
+26. Sick:
+"It started with a cough. Then came the chills, the ache in my bones. By the time I realized how bad it was... I was too weak to fight it."
+27. Hypothermia:
+"I kept telling myself to keep moving, but the snow buried me. I thought I could push through it. But the cold doesn’t wait for you."
+28. Heatstroke:
+"I thought it was just a headache at first, but it didn’t stop. I collapsed on the dirt, and I knew it was over."
+29. Stabbed:
+"I was looking for something in the dark, and before I knew it, something sharp pierced my side. The pain didn’t last long. It just... ended."
+30. Sick:
+"It wasn’t just the sickness—it was how I couldn’t tell anyone. They said I was faking it. And then... I was gone."
+________________
+
+
+   1. Embarrassed:
+"Oh... um, I really don’t think it’s important. It’s... it's not something I like to talk about. You wouldn’t want to hear it."
+   2. Shy:
+"I-I’d rather not say. It’s just... well, it's really embarrassing. Maybe you could ask someone else?"
+   3. Embarrassed:
+"Ugh, please... let’s not go there. It was a... mistake. A stupid one. Definitely not the kind of thing you wanna know about."
+   4. Shy:
+"I don’t really want to talk about it. I’m sure there’s a lot more interesting things you could ask about... maybe the weather?"
+   5. Avoiding:
+"You really want to know? I... I’m not sure that’s a good idea. It’s kinda... embarrassing. Just trust me, it’s better left unsaid."
+   6. Embarrassed:
+"Oh, no. Not that! I... I didn’t go out in a heroic way, let’s just put it that way. Can we skip this one?"
+   7. Shy:
+"I... um... I don’t know if I can. It’s really not something I like to share. Maybe we could talk about something else?"
+   8. Embarrassed:
+"Please, please don’t ask me about it. I—I didn’t even know it was happening! It was... totally my fault, but... can we forget it?"
+   9. Avoiding:
+"I didn’t want to die that way. But... well, things happen. I don’t want to go into detail. It’s just too... awkward."
+   10. Shy:
+"If I tell you, will you promise not to laugh? It’s just... really, really embarrassing. You wouldn’t want to know."
+   11. Embarrassed:
+"It wasn’t even something... grand. No dramatic fight, no noble sacrifice. Just... a dumb accident. I’d rather not talk about it."
+   12. Shy:
+"I was... uh... kind of embarrassed when it happened. It's not something I want to revisit. Can’t we just leave it at that?"
+   13. Avoiding:
+"Look, I just... I’m not proud of it, okay? It wasn’t heroic. It wasn’t dignified. It was... well, just a bad situation. I’d prefer if you didn’t ask."
+   14. Embarrassed:
+"Can we just pretend I didn’t die? Yeah, I know that's not possible, but... maybe we don’t need to talk about how I died."
+   15. Shy:
+"I’m really... I’m really not comfortable talking about it. I... I’d rather just hang out here and keep to myself, if that’s okay?"
+   16. Embarrassed:
+"Oh, you don’t want to hear that story. Trust me, it’s not one of my best moments. Maybe I’ll tell you another time... or not."
+   17. Avoiding:
+"Let’s just say it wasn’t a big fight, or some great battle. It was... just a dumb mistake. I'd rather not go into it, alright?"
+   18. Shy:
+"I-I wasn’t exactly at my best when it happened. You know, not very... graceful. Can we just leave it at that?"
+   19. Embarrassed:
+"I didn’t die in any cool way, okay? It was just... yeah, let’s just say it was the kind of thing that makes you want to crawl into a hole."
+   20. Avoiding:
+"I’d really rather not... it’s just one of those things you try to forget. It’s not like I had a choice... but, still."
