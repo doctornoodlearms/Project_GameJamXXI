@@ -128,12 +128,6 @@ nextPageButton = NodePath("Button")
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchors_preset = 11
-=======
-[node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 1
-anchors_preset = 6
->>>>>>> 7661c3d1b3cfd7ceeac07cb3f7294fbd604c4a08
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -157,4 +151,3 @@ modulate = Color(0.834614, 0.834614, 0.834614, 1)
 position = Vector2(574, 476)
 scale = Vector2(1, 0.52537)
 texture = ExtResource("4_ln2h6")
->>>>>>> 7661c3d1b3cfd7ceeac07cb3f7294fbd604c4a08
