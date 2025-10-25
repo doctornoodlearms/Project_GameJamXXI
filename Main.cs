@@ -1,6 +1,10 @@
-using Godot;
-using System;
+using NDLDebug;
 
-public partial class Main : Node
-{
+public partial class Main : Node{
+
+    public override void _Ready(){
+
+        Logging.Print("Test");
+
+    }
 }
