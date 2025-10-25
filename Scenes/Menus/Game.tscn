@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dltvw12h5h0el"]
+[gd_scene load_steps=0 format=3 uid="uid://dltvw12h5h0el"]
 
 [node name="Game" type="Control"]
 layout_mode = 3

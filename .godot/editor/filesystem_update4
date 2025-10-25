@@ -1,4 +1,2 @@
-res://Main.tscn
-res://Menu.tscn
-res://Game.tscn
-res://Game_MakePotions.tscn
+res://Scenes/Menus/Menu.tscn
+res://Scenes/Menus/Main.tscn
