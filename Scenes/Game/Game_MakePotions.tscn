@@ -1,9 +1,75 @@
-[gd_scene load_steps=0 format=3 uid="uid://g3r263eaacvs"]
+[gd_scene load_steps=5 format=3 uid="uid://g3r263eaacvs"]
 
-[node name="Game_MakePotions" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Texture2D" uid="uid://bqx2rskhb3xv7" path="res://icon.svg" id="1_h3s2y"]
+[ext_resource type="PackedScene" uid="uid://dwmxs48k7bu8a" path="res://Scenes/Instances/Interactable.tscn" id="2_k4xov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guljm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4xov"]
+size = Vector2(199, 20)
+
+[node name="Game_MakePotions" type="Node2D"]
+
+[node name="Pot" type="Area2D" parent="."]
+position = Vector2(565, 508)
+scale = Vector2(2, 2)
+
+[node name="Sprite" type="Sprite2D" parent="Pot"]
+texture = ExtResource("1_h3s2y")
+metadata/_edit_lock_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="Pot"]
+shape = SubResource("RectangleShape2D_guljm")
+metadata/_edit_lock_ = true
+
+[node name="Shelf1" type="Node2D" parent="."]
+
+[node name="Shelf" type="StaticBody2D" parent="Shelf1"]
+position = Vector2(175, 145)
+
+[node name="Collision" type="CollisionShape2D" parent="Shelf1/Shelf"]
+position = Vector2(89.5, 0)
+shape = SubResource("RectangleShape2D_k4xov")
+metadata/_edit_lock_ = true
+
+[node name="Interactable" parent="Shelf1" instance=ExtResource("2_k4xov")]
+position = Vector2(168, 257)
+
+[node name="Shelf2" type="Node2D" parent="."]
+
+[node name="Shelf" type="StaticBody2D" parent="Shelf2"]
+position = Vector2(853, 355)
+
+[node name="Collision" type="CollisionShape2D" parent="Shelf2/Shelf"]
+position = Vector2(89.5, 0)
+shape = SubResource("RectangleShape2D_k4xov")
+metadata/_edit_lock_ = true
+
+[node name="Interactable" parent="Shelf2" instance=ExtResource("2_k4xov")]
+position = Vector2(258, 52)
+
+[node name="Shelf3" type="Node2D" parent="."]
+
+[node name="Shelf" type="StaticBody2D" parent="Shelf3"]
+position = Vector2(83, 347)
+
+[node name="Collision" type="CollisionShape2D" parent="Shelf3/Shelf"]
+position = Vector2(89.5, 0)
+shape = SubResource("RectangleShape2D_k4xov")
+metadata/_edit_lock_ = true
+
+[node name="Interactable" parent="Shelf3" instance=ExtResource("2_k4xov")]
+position = Vector2(933, 247)
+
+[node name="Shelf4" type="Node2D" parent="."]
+
+[node name="Shelf" type="StaticBody2D" parent="Shelf4"]
+position = Vector2(749, 145)
+
+[node name="Collision" type="CollisionShape2D" parent="Shelf4/Shelf"]
+position = Vector2(89.5, 0)
+shape = SubResource("RectangleShape2D_k4xov")
+metadata/_edit_lock_ = true
+
+[node name="Interactable" parent="Shelf4" instance=ExtResource("2_k4xov")]
+position = Vector2(837, 36)
