@@ -1,3 +1,5 @@
-res://Scenes/Menus/Menu.tscn
-res://Scenes/Menus/Main.tscn
+res://Scenes/Instances/Interactable.tscn
+res://Scenes/Instances/Interactable.cs
+res://Scenes/Menus/Game.tscn
 res://Scenes/Menus/Main.cs
+res://Scenes/Menus/Main.tscn
