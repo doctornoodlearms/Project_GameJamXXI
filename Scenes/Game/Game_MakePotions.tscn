@@ -1,24 +1,26 @@
 [gd_scene load_steps=7 format=3 uid="uid://g3r263eaacvs"]
 
 [ext_resource type="Script" uid="uid://dyqlxa3y21yu4" path="res://Scenes/Instances/Pot.cs" id="1_3q2jh"]
+[ext_resource type="Script" uid="uid://b034lovynoeva" path="res://Scenes/Game/Game_MakePotions.cs" id="1_8xy2c"]
 [ext_resource type="Texture2D" uid="uid://bqx2rskhb3xv7" path="res://icon.svg" id="1_h3s2y"]
-[ext_resource type="PackedScene" uid="uid://4ttc6ffvqtjk" path="res://Scenes/Instances/Ingredient.tscn" id="2_k4xov"]
+[ext_resource type="PackedScene" uid="uid://bgg2aeumt211p" path="res://Scenes/Instances/Shelf.tscn" id="3_3q2jh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guljm"]
 size = Vector2(119.5, 123)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4xov"]
-size = Vector2(199, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q2jh"]
+resource_local_to_scene = true
 size = Vector2(1171, 44)
 
-[node name="Game_MakePotions" type="Node2D"]
+[node name="Game_MakePotions" type="Node2D" node_paths=PackedStringArray("button")]
+script = ExtResource("1_8xy2c")
+button = NodePath("CanvasLayer/Button")
 
-[node name="Pot" type="Area2D" parent="." node_paths=PackedStringArray("potionSpawn")]
+[node name="Pot" type="Area2D" parent="." node_paths=PackedStringArray("ingredientShelfList", "potionSpawn")]
 position = Vector2(575, 505)
 scale = Vector2(2, 2)
 script = ExtResource("1_3q2jh")
+ingredientShelfList = [NodePath("../Shelf3"), NodePath("../Shelf2"), NodePath("../Shelf")]
 potionSpawn = NodePath("../PotionSpawn")
 potionIngredientCount = 3
 
@@ -31,61 +33,17 @@ position = Vector2(0.25, -2.5)
 shape = SubResource("RectangleShape2D_guljm")
 metadata/_edit_lock_ = true
 
-[node name="Shelf1" type="Node2D" parent="."]
-position = Vector2(105, 468)
+[node name="Shelf3" parent="." instance=ExtResource("3_3q2jh")]
+position = Vector2(819, 161)
+ingredientName = "graveyard_dust"
 
-[node name="Shelf" type="StaticBody2D" parent="Shelf1"]
-metadata/_edit_lock_ = true
-
-[node name="Collision" type="CollisionShape2D" parent="Shelf1/Shelf"]
-position = Vector2(89.5, 0)
-shape = SubResource("RectangleShape2D_k4xov")
-metadata/_edit_lock_ = true
-
-[node name="Ingredient" parent="Shelf1" instance=ExtResource("2_k4xov")]
-position = Vector2(83, -89)
-ingredientName = "eyeball"
-
-[node name="Shelf2" type="Node2D" parent="."]
-position = Vector2(904, 560)
-
-[node name="Shelf" type="StaticBody2D" parent="Shelf2"]
-metadata/_edit_lock_ = true
-
-[node name="Collision" type="CollisionShape2D" parent="Shelf2/Shelf"]
-position = Vector2(89.5, 0)
-shape = SubResource("RectangleShape2D_k4xov")
-metadata/_edit_lock_ = true
-
-[node name="Shelf3" type="Node2D" parent="."]
-position = Vector2(769, 221)
-
-[node name="Shelf" type="StaticBody2D" parent="Shelf3"]
-metadata/_edit_lock_ = true
-
-[node name="Collision" type="CollisionShape2D" parent="Shelf3/Shelf"]
-position = Vector2(89.5, 0)
-shape = SubResource("RectangleShape2D_k4xov")
-metadata/_edit_lock_ = true
-
-[node name="Ingredient" parent="Shelf3" instance=ExtResource("2_k4xov")]
-position = Vector2(83, -87)
+[node name="Shelf2" parent="." instance=ExtResource("3_3q2jh")]
+position = Vector2(105, 163)
 ingredientName = "holy_water"
 
-[node name="Shelf4" type="Node2D" parent="."]
-position = Vector2(167, 218)
-
-[node name="Shelf" type="StaticBody2D" parent="Shelf4"]
-metadata/_edit_lock_ = true
-
-[node name="Collision" type="CollisionShape2D" parent="Shelf4/Shelf"]
-position = Vector2(89.5, 0)
-shape = SubResource("RectangleShape2D_k4xov")
-metadata/_edit_lock_ = true
-
-[node name="Ingredient" parent="Shelf4" instance=ExtResource("2_k4xov")]
-position = Vector2(83, -89)
-ingredientName = "graveyard_dust"
+[node name="Shelf" parent="." instance=ExtResource("3_3q2jh")]
+position = Vector2(32, 455)
+ingredientName = "eyeball"
 
 [node name="PotionSpawn" type="Node2D" parent="."]
 position = Vector2(946, 460)
@@ -97,3 +55,13 @@ position = Vector2(260, 631)
 position = Vector2(315.5, 12)
 shape = SubResource("RectangleShape2D_3q2jh")
 metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "<"

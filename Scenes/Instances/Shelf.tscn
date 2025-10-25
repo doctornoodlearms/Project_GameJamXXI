@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgg2aeumt211p"]
+
+[ext_resource type="Script" uid="uid://diogyb5lkvc7s" path="res://Scenes/Instances/Shelf.cs" id="1_vc11b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkovf"]
+size = Vector2(282, 20)
+
+[node name="Shelf" type="StaticBody2D" node_paths=PackedStringArray("IngredientSpawn")]
+script = ExtResource("1_vc11b")
+IngredientSpawn = NodePath("IngredientSpawn")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(131, 0)
+shape = SubResource("RectangleShape2D_fkovf")
+
+[node name="IngredientSpawn" type="Node2D" parent="."]
+position = Vector2(132, -77)

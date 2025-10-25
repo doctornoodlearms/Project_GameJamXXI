@@ -11,6 +11,7 @@ public partial class PotionInstance : Interactable{
     public override void _Ready(){
 
         SetPotion(PotionName);
+        base._Ready();
     }
 
     void SetPotion(string name){
