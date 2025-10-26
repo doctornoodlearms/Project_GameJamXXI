@@ -10,9 +10,9 @@ script = ExtResource("2_0j1gc")
 sprite = NodePath("Fluid")
 
 [node name="Fluid" type="Sprite2D" parent="." index="0"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_fptok")
 
 [node name="Bottle" type="Sprite2D" parent="." index="1"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_mvgts")
