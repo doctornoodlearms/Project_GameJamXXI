@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4cqw"]
 bg_color = Color(0.205117, 0.205117, 0.205117, 1)
 
-[node name="OrbInterface" type="PanelContainer" node_paths=PackedStringArray("potionEntries", "closeButton", "potionText")]
+[node name="OrbInterface" type="PanelContainer" node_paths=PackedStringArray("symptomEntries", "potionEntries", "closeButton", "potionText", "symptomText")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,16 +13,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v4cqw")
 script = ExtResource("1_v4cqw")
-potionEntries = NodePath("TabContainer/Recipes/HSplitContainer/SymptomList")
+symptomEntries = NodePath("TabContainer/Symptoms/HSplitContainer/SymptomList")
+potionEntries = NodePath("TabContainer/Recipes/HSplitContainer/RecipeList")
 closeButton = NodePath("Button")
 potionText = NodePath("TabContainer/Recipes/HSplitContainer/RichTextLabel")
+symptomText = NodePath("TabContainer/Symptoms/HSplitContainer/RichTextLabel")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 
 [node name="Symptoms" type="VBoxContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -36,8 +37,10 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Symptoms/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
 
 [node name="Recipes" type="VBoxContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -45,7 +48,7 @@ metadata/_tab_index = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="SymptomList" type="VBoxContainer" parent="TabContainer/Recipes/HSplitContainer"]
+[node name="RecipeList" type="VBoxContainer" parent="TabContainer/Recipes/HSplitContainer"]
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Recipes/HSplitContainer"]
