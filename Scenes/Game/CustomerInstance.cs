@@ -1,4 +1,4 @@
-using Definitions.Customers;
+using Definitions.Symptoms;
 using Scenes.Global;
 
 public partial class CustomerInstance:Area2D{
@@ -6,6 +6,8 @@ public partial class CustomerInstance:Area2D{
     [Export] Sprite2D sprite;
 
     PotionInstance potionInstance;
+
+    string symptomName = "";
 
     bool potionAccepted = false;
 
@@ -25,18 +27,33 @@ public partial class CustomerInstance:Area2D{
         }
     }
 
-    void LoadCustomer(string customerName){
+    void LoadCustomer(string symptomName){
 
-        switch(customerName){
+        switch(symptomName){
 
-            case(Customer.Name):
+            case(SymptomHypothermia.Name):
 
-                sprite.Texture = GD.Load<Texture2D>(Customer.Texture);
-                sprite.Visible = true;
-                Monitoring = true;
+                sprite.Texture = GD.Load<Texture2D>(SymptomHypothermia.Texture);
+                break;
+            
+            case(SymptomHeatStroke.Name):
+
+                sprite.Texture = GD.Load<Texture2D>(SymptomHeatStroke.Texture);
+                break;
+
+            case(SymptomSick.Name):
+
+                sprite.Texture = GD.Load<Texture2D>(SymptomSick.Texture);
+                break;
+
+            case(SymptomStabbed.Name):
+
+                sprite.Texture = GD.Load<Texture2D>(SymptomStabbed.Texture);
                 break;
 
         }
+        sprite.Visible = true;
+        Monitoring = true;
     }
 
     void CustomerAccept(){
