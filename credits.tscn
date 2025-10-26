@@ -1,14 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://ofgu8a1b534t"]
+[gd_scene load_steps=3 format=3 uid="uid://ofgu8a1b534t"]
 
+[ext_resource type="Script" uid="uid://dajbyf580y43i" path="res://Credits.cs" id="1_c1t8d"]
 [ext_resource type="Texture2D" uid="uid://dvlbc2eq3obdr" path="res://Scenes/Game/assets/Paper.png" id="1_nm7lk"]
 
-[node name="Credits" type="Control"]
+[node name="CreditsScene" type="Control" node_paths=PackedStringArray("backButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_c1t8d")
+backButton = NodePath("MarginContainer/Back")
 
 [node name="Paper" type="Sprite2D" parent="."]
 position = Vector2(583, 319)
