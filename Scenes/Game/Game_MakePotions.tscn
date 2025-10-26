@@ -22,7 +22,7 @@ scale = Vector2(2, 2)
 script = ExtResource("1_3q2jh")
 ingredientShelfList = [NodePath("../Shelf3"), NodePath("../Shelf2"), NodePath("../Shelf")]
 potionSpawn = NodePath("../PotionSpawn")
-potionIngredientCount = 3
+potionIngredientCount = 2
 
 [node name="Sprite" type="Sprite2D" parent="Pot"]
 texture = ExtResource("1_h3s2y")
@@ -36,14 +36,17 @@ metadata/_edit_lock_ = true
 [node name="Shelf3" parent="." instance=ExtResource("3_3q2jh")]
 position = Vector2(819, 161)
 ingredientName = "graveyard_dust"
+ingredientName2 = "blood_orb"
 
 [node name="Shelf2" parent="." instance=ExtResource("3_3q2jh")]
 position = Vector2(105, 163)
-ingredientName = "holy_water"
+ingredientName = "spirit_essence"
+ingredientName2 = "ice_shard"
 
 [node name="Shelf" parent="." instance=ExtResource("3_3q2jh")]
 position = Vector2(32, 455)
 ingredientName = "eyeball"
+ingredientName2 = "fireflies"
 
 [node name="PotionSpawn" type="Node2D" parent="."]
 position = Vector2(946, 460)
