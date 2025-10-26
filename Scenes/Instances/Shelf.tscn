@@ -5,13 +5,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkovf"]
 size = Vector2(282, 20)
 
-[node name="Shelf" type="StaticBody2D" node_paths=PackedStringArray("IngredientSpawn")]
+[node name="Shelf" type="StaticBody2D" node_paths=PackedStringArray("IngredientSpawn", "IngredientSpawn2")]
 script = ExtResource("1_vc11b")
 IngredientSpawn = NodePath("IngredientSpawn")
+IngredientSpawn2 = NodePath("IngredientSpawn2")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(131, 0)
 shape = SubResource("RectangleShape2D_fkovf")
 
 [node name="IngredientSpawn" type="Node2D" parent="."]
-position = Vector2(132, -77)
+position = Vector2(182, -76)
+
+[node name="IngredientSpawn2" type="Node2D" parent="."]
+position = Vector2(60, -77)

@@ -13,7 +13,7 @@ public partial class Pot : Area2D{
 
     Array<string> currentIngredients = new Array<string>();
 
-    Dictionary<string, Array> potionLookup = new Dictionary<string, Array>(){
+    Dictionary<string, Array<string>> potionLookup = new Dictionary<string, Array<string>>(){
 
         {PotionHeatStroke.Name, PotionHeatStroke.Keys},
         {PotionHypothermia.Name, PotionHypothermia.Keys},
@@ -63,14 +63,12 @@ public partial class Pot : Area2D{
     string GetPotionName(){
 
         foreach(string potionName in potionLookup.Keys){
+            Logging.Print("Checking: "+potionName);
 
-            foreach(string ingredient in currentIngredients){
+            if(potionLookup[potionName].RecursiveEqual(currentIngredients)){
 
-                if(potionLookup[potionName].Contains(ingredient))continue;
-                else break;
+                return potionName;
             }
-
-            return potionName;
         }
         return "";
     }

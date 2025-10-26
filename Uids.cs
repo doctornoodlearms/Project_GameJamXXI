@@ -15,6 +15,14 @@ public static class Uid {
     public const string CustomerSick = "uid://baiyl23uk01yv";
     public const string CustomerHeatStroke = "uid://bb7my1vvyotvi";
 
+    public const string IngredientSpiritEssence = "uid://8itd8lervvg2";
+    public const string IngredientEyeballs = "uid://bg378hx5n4tff";
+    public const string IngredientFrostEssence = "uid://cvw5co288bb22";
+    public const string IngredientFireflies = "uid://ds6vay84hi2lr";
+    public const string IngredientBlorb = "uid://b6prf5uedh8dd";
+    public const string IngredientGraveyardDirt = "uid://cc2v51ud73i46";
+    public const string IngredientSpiderweb = "uid://2adeeo4fosui";
+
     public const string Icon = "uid://bqx2rskhb3xv7";
 
     public const string MenuScene = "uid://d3rri37len1eo";

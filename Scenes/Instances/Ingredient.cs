@@ -26,8 +26,24 @@ public partial class Ingredient:Interactable{
                 sprite.Texture = GD.Load<Texture2D>(IngredientGraveyardDust.TextureId);
                 break;
 
-            case(IngredientHolyWater.Name):
-                sprite.Texture = GD.Load<Texture2D>(IngredientHolyWater.TextureId);
+            case(IngredientBlorb.Name):
+                sprite.Texture = GD.Load<Texture2D>(IngredientBlorb.TextureId);
+                break;
+
+            case(IngredientFireflies.Name):
+                sprite.Texture = GD.Load<Texture2D>(IngredientFireflies.TextureId);
+                break;
+
+             case(IngredientIceShard.Name):
+                sprite.Texture = GD.Load<Texture2D>(IngredientIceShard.TextureId);
+                break;
+            
+             case(IngredientSpiderString.Name):
+                sprite.Texture = GD.Load<Texture2D>(IngredientSpiderString.TextureId);
+                break;
+            
+             case(IngredientSpiritEssence.Name):
+                sprite.Texture = GD.Load<Texture2D>(IngredientSpiritEssence.TextureId);
                 break;
         }
     }
