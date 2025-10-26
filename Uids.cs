@@ -24,4 +24,6 @@ public static class Uid {
     public const string IngredientSpiderweb = "uid://2adeeo4fosui";
 
     public const string Icon = "uid://bqx2rskhb3xv7";
+
+    public const string MenuScene = "uid://d3rri37len1eo";
 }
