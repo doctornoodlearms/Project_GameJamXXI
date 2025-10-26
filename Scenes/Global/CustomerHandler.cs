@@ -1,5 +1,5 @@
 using System;
-using Definitions.Customers;
+using Definitions.Symptoms;
 
 public partial class CustomerHandler:Node{
 
@@ -7,7 +7,7 @@ public partial class CustomerHandler:Node{
 
     Array<string> customerList = new Array<string>(){
 
-        Customer.Name
+        SymptomHeatStroke.Name, SymptomHypothermia.Name, SymptomSick.Name, SymptomStabbed.Name
     };
 
     public string CurrentCustomer;
