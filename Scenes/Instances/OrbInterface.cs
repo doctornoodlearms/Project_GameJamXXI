@@ -1,18 +1,20 @@
+using System.ComponentModel.Design;
 using Definitions.Potions;
+using Definitions.Symptoms;
 
 public partial class OrbInterface : Control{
 
 
-    [Export] VBoxContainer symptomList;
+    [Export] VBoxContainer symptomEntries;
     [Export] VBoxContainer potionEntries;
     [Export] Button closeButton;
 
     [Export] RichTextLabel potionText;
+    [Export] RichTextLabel symptomText;
 
-    Array<string> symptoms = new Array<string>()
-    {
+    Array<string> symptomList = new Array<string>(){
 
-
+        SymptomHeatStroke.Name, SymptomHypothermia.Name, SymptomSick.Name, SymptomStabbed.Name
     };
 
     Array<string> potionList = new Array<string>(){
@@ -26,11 +28,18 @@ public partial class OrbInterface : Control{
         foreach(string potionName in potionList){
 
             Button potionButton = new Button();
-            potionButton.Text = potionName;
+            potionButton.Text = GetPotionDisplayName(potionName);
             potionButton.Pressed += () => onPotionButtonPressed(potionName);
             potionEntries.AddChild(potionButton);
         }
+        foreach(string symptomName in symptomList){
 
+            Button symptomButton = new Button();
+            symptomButton.Text = GetSymptomDisplayName(symptomName);
+            symptomButton.Pressed += () => onSymptomButtonPressed(symptomName);
+            symptomEntries.AddChild(symptomButton);
+        }
+        
         closeButton.Pressed += onClosePressed;
     }
 
@@ -63,8 +72,76 @@ public partial class OrbInterface : Control{
         potionText.Text = text;
     }
 
+    void onSymptomButtonPressed(string symptomName){
+
+        string text = "";
+        switch (symptomName)
+        {
+
+            case (SymptomHeatStroke.Name):
+                text = $"[pulse][color={PotionHeatStroke.PotionColor.ToHtml()}][b]{SymptomHeatStroke.DisplayName}[/b][/color][/pulse]";
+                text += "\nDescription: " + SymptomHeatStroke.Description;
+                break;
+
+            case (SymptomHypothermia.Name):
+                text = $"[shake][color={PotionHypothermia.PotionColor.ToHtml()}][b]{SymptomHypothermia.DisplayName}[/b][/color][/shake]";
+                text += "\nDescription: " + SymptomHypothermia.Description;
+                break;
+
+            case (SymptomStabbed.Name):
+                text = $"[wave][color={PotionStabbed.PotionColor.ToHtml()}][b]{SymptomStabbed.DisplayName}[/b][/color][/wave]";
+                text += "\nDescription: " + SymptomStabbed.Description;
+                break;
+
+            case (SymptomSick.Name):
+                text = $"[tornado][color={PotionSick.PotionColor.ToHtml()}][b]{SymptomSick.DisplayName}[/b][/color][/tornado]";
+                text += "\nDescription: " + SymptomSick.Description;
+                break;
+        }
+
+        symptomText.Text = text;
+    }
+
     void onClosePressed(){
 
         Visible = false;
+    }
+
+    string GetPotionDisplayName(string name){
+
+        switch(name){
+
+            case(PotionHeatStroke.Name):
+                return PotionHeatStroke.DisplayName;
+            
+            case(PotionSick.Name):
+                return PotionSick.DisplayName;
+
+            case(PotionStabbed.Name):
+                return PotionStabbed.DisplayName;
+            
+            case(PotionHypothermia.Name):
+                return PotionHypothermia.DisplayName;
+        }
+        return "";
+    }
+
+    string GetSymptomDisplayName(string name){
+
+        switch(name){
+
+            case(SymptomHeatStroke.Name):
+                return SymptomHeatStroke.DisplayName;
+            
+            case(SymptomHypothermia.Name):
+                return SymptomHypothermia.DisplayName;
+
+            case(SymptomSick.Name):
+                return SymptomSick.DisplayName;
+
+            case(SymptomStabbed.Name):
+                return SymptomStabbed.DisplayName;
+        }
+        return "";
     }
 }

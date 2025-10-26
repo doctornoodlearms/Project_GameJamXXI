@@ -12,7 +12,7 @@ public partial class Orb : Area2D{
 
         if(@event is InputEventMouseButton mouseButton){
 
-            if(mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed){
+            if(mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed && mouse){
 
                 PopupInterface();
             }
