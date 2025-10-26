@@ -1,16 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://g3r263eaacvs"]
+[gd_scene load_steps=9 format=3 uid="uid://g3r263eaacvs"]
 
 [ext_resource type="Script" uid="uid://dyqlxa3y21yu4" path="res://Scenes/Instances/Pot.cs" id="1_3q2jh"]
 [ext_resource type="Script" uid="uid://b034lovynoeva" path="res://Scenes/Game/Game_MakePotions.cs" id="1_8xy2c"]
-[ext_resource type="Texture2D" uid="uid://bqx2rskhb3xv7" path="res://icon.svg" id="1_h3s2y"]
 [ext_resource type="PackedScene" uid="uid://bgg2aeumt211p" path="res://Scenes/Instances/Shelf.tscn" id="3_3q2jh"]
+[ext_resource type="Texture2D" uid="uid://df577ivqbcapj" path="res://Scenes/Game/assets/Pot.png" id="3_8xy2c"]
+[ext_resource type="Texture2D" uid="uid://blmytmgmkpqib" path="res://Scenes/Game/assets/Shelf.png" id="5_55xj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guljm"]
-size = Vector2(119.5, 123)
+size = Vector2(93, 56.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q2jh"]
 resource_local_to_scene = true
 size = Vector2(1171, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55xj4"]
+size = Vector2(211, 25)
 
 [node name="Game_MakePotions" type="Node2D" node_paths=PackedStringArray("button")]
 script = ExtResource("1_8xy2c")
@@ -25,11 +29,12 @@ potionSpawn = NodePath("../PotionSpawn")
 potionIngredientCount = 2
 
 [node name="Sprite" type="Sprite2D" parent="Pot"]
-texture = ExtResource("1_h3s2y")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8xy2c")
 metadata/_edit_lock_ = true
 
 [node name="Collision" type="CollisionShape2D" parent="Pot"]
-position = Vector2(0.25, -2.5)
+position = Vector2(-2.5, -35.75)
 shape = SubResource("RectangleShape2D_guljm")
 metadata/_edit_lock_ = true
 
@@ -68,3 +73,15 @@ offset_right = 8.0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 text = "<"
+
+[node name="Shelf4" type="Sprite2D" parent="."]
+position = Vector2(942, 576)
+texture = ExtResource("5_55xj4")
+
+[node name="PotionShelf" type="StaticBody2D" parent="."]
+position = Vector2(945, 581)
+metadata/_edit_group_ = true
+
+[node name="Collision" type="CollisionShape2D" parent="PotionShelf"]
+position = Vector2(11.5, 2.5)
+shape = SubResource("RectangleShape2D_55xj4")
