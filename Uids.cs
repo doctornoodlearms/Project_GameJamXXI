@@ -18,4 +18,6 @@ public static class Uid {
     public const string Icon = "uid://bqx2rskhb3xv7";
 
     public const string MenuScene = "uid://d3rri37len1eo";
+
+    public const string Music = "uid://drmy5peocpvj8";
 }
