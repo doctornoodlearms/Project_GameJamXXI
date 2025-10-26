@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 CraftedPotions="*res://Scenes/Global/CraftedPotions.cs"
 CustomerHandler="*res://Scenes/Global/CustomerHandler.cs"
+Audio="*res://Audio.cs"
 
 [dotnet]
 

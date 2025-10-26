@@ -77,15 +77,6 @@ Alex Kelly "
 horizontal_alignment = 1
 vertical_alignment = 3
 
-[node name="Label4" type="Label" parent="CenterContainer/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 35
-text = "Artist 
-Josiah Hoskins"
-horizontal_alignment = 1
-vertical_alignment = 3
-
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_right = 40.0
