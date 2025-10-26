@@ -37,14 +37,13 @@ texture = SubResource("MeshTexture_gwu2e")
 metadata/_edit_lock_ = true
 
 [node name="Customer" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(560, 258)
+position = Vector2(563, 315)
 script = ExtResource("4_y3kpf")
 sprite = NodePath("Sprite")
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="Sprite2D" parent="Customer"]
 position = Vector2(13.5, 13)
-scale = Vector2(2.89844, 3.6875)
 
 [node name="Collision" type="CollisionShape2D" parent="Customer"]
 position = Vector2(9, 10)
