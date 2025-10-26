@@ -3,13 +3,16 @@
 [ext_resource type="Script" uid="uid://dqm6rx38i276c" path="res://Scenes/Menus/Main.cs" id="1_ithig"]
 [ext_resource type="FontFile" uid="uid://bff1b272qecbf" path="res://Scenes/Menus/Assets/font/SPIRITS.TTF" id="2_vssdx"]
 
-[node name="Main" type="PanelContainer"]
+[node name="Main" type="PanelContainer" node_paths=PackedStringArray("playButton", "creditsButton", "quitButton")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ithig")
+playButton = NodePath("Vbox/Vbox/Play")
+creditsButton = NodePath("Vbox/Vbox/Credits")
+quitButton = NodePath("Vbox/Vbox/Quit")
 
 [node name="Vbox" type="VBoxContainer" parent="."]
 layout_mode = 2
